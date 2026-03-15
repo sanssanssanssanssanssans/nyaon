@@ -24,4 +24,4 @@ jobs:
       - name: e2e
         run: cargo test --verbose
       - name: gamble
-        run: cargo build --example gamblegame --verbose
+        run: cargo build --example game --verbose
