@@ -1,0 +1,27 @@
+name: Rust Core CI
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+env:
+  CARGO_TERM_COLOR: always
+jobs:
+  build_and_test:
+    name: Format, Lint, and Test
+    runs-on: ubuntu-latest
+    steps:
+      - name: source checkout
+        uses: actions/checkout@v4
+      - name: toolchain setting
+        uses: dtolnay/rust-toolchain@stable
+        with:
+          components: rustfmt, clippy
+      - name: code formatting check
+        run: cargo fmt --all -- --check
+      - name: check clippy
+        run: cargo clippy --all-targets --all-features -- -D warnings
+      - name: e2e
+        run: cargo test --verbose
+      - name: gamble
+        run: cargo build --example gamblegame --verbose
