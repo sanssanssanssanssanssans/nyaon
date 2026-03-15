@@ -1,7 +1,7 @@
 use nyaon::ast::node::Node;
 use nyaon::db::engine::NyaonDb;
-use nyaon::lexer::lexer::Lexer;
-use nyaon::parser::parser::Parser;
+use nyaon::lexer::scanner::Lexer;
+use nyaon::parser::engine::Parser;
 use std::fs;
 
 #[test]

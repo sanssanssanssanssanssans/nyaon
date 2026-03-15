@@ -1,4 +1,4 @@
-use crate::lexer::lexer::Lexer;
+use crate::lexer::scanner::Lexer;
 use crate::lexer::token::Token;
 pub fn is_letter(ch: char) -> bool {
     ch.is_alphabetic() || ch == '_'

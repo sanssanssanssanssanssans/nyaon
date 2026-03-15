@@ -1,4 +1,4 @@
-use nyaon::lexer::lexer::Lexer;
+use nyaon::lexer::scanner::Lexer;
 use nyaon::lexer::token::Token;
 
 #[test]

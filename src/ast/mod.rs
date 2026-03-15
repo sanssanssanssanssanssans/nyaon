@@ -1,3 +1,3 @@
-pub mod ast;
+pub mod tree;
 pub mod node;
 pub mod types;

@@ -1,6 +1,6 @@
-use crate::ast::ast::NyaonAst;
+use crate::ast::tree::NyaonAst;
 use crate::ast::node::Node;
-use crate::lexer::lexer::Lexer;
+use crate::lexer::scanner::Lexer;
 use crate::lexer::token::Token;
 use std::collections::HashMap;
 pub struct Parser {

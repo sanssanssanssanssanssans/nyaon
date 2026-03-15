@@ -1,6 +1,6 @@
 use nyaon::ast::node::Node;
-use nyaon::lexer::lexer::Lexer;
-use nyaon::parser::parser::Parser;
+use nyaon::lexer::scanner::Lexer;
+use nyaon::parser::engine::Parser;
 #[test]
 fn test_parser_simple_object() {
     let input = r#"{ "lang": "nyaon", "fast": true }"#;
